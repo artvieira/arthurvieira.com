@@ -289,8 +289,22 @@ body {
 	font-family:'Bariol-Regular';
 	background-image:url('../images/background.png');
 	font-size:62.5%;
-	-webkit-font-smoothing:antialiased;
-	line-height:1.4;
+	font-smoothing:antialiased;
+    -moz-font-smoothing:antialiased;
+    -webkit-font-smoothing:antialiased;
+    -o-font-smoothing:antialiased;
+}
+
+h1 {
+    font-size:3.2em;
+}
+
+h2 {
+    font-size:2.8em;
+}
+
+p {
+    font-size:2em;
 }
 
 #cont { 

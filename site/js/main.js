@@ -63,7 +63,7 @@ window.scrollTo(0, 1);
 	
 	function changeToEN() {
 		var lang = 'en-us';
-		getJsonLanguage(lang);
+		//getJsonLanguage(lang);
 		setLangCookie(lang);
 		
 		$('#bt-en').hide();
@@ -92,10 +92,10 @@ window.scrollTo(0, 1);
 	}
 	
 	function getJsonLanguage(lang) {
-		$.get('/js/lib/lang_'+lang+'.json', function (data) {getLanguage(data);});
+		$.get('/js/lib/lang_'+lang+'.json', function (data) {setLanguage(data);});
 	}
 	
-	function getLanguage(data){
+	function setLanguage(data){
 		$('#bio-content').html(data.pagebio);
 	}
 	

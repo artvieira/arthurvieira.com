@@ -11,7 +11,7 @@
 	<meta name="description" content="">
     <meta name="viewport" content="width=device-width">
 	<meta name="author" content="Arthur VML - @art_vieira">
-	<title>Layout</title>
+	<title>Arthur Vieira</title>
 	
 	<link rel="stylesheet" type="text/css" href="/css/normalize.min.css">
 	<link rel="stylesheet" type="text/css" href="/fonts/Bariol-Regular/font.css">

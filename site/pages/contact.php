@@ -1,5 +1,5 @@
-<div class="text-opaque">
-	<form>ç â fsdf
+<section class="content-section">
+	<form>
 		<p class="form-label">
 			Nome:
 		</p>
@@ -27,4 +27,4 @@
 		<input id="send" type="button" style="display: inline; margin-top: 10px;" value="Send" />
 		<input id="new" type="button" style="display: inline; margin-top: 10px;" value="Clean" />
 	</form>
-</div>
+</section>

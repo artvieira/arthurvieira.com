@@ -1,11 +1,7 @@
-<div class="text-opaque" style="text-align:center; font-size:3.5em;">
-	<p>
-		Hello! I'm Arthur!
-	</p>
-	<p>
-		I build beautiful websites using the best techniques on the market!
-	</p>
-	<p>
-		It also can take care of other things like SEO, E-Commerces and Servers.
-	</p>
-</div>
+<section class="content-section">
+	<h1>Hello! I'm Arthur!</h1>
+	
+	<p>I build beautiful websites using the best techniques on the market!</p>
+	
+	<p>It also can take care of other things like Design Logos, Website Layouts, Blogs, Layouts for blogs, SEO, E-Commerces and Config Web Servers.</p>
+</section>

@@ -18,40 +18,6 @@
 	<link rel="stylesheet" type="text/css" href="/css/main.css">
 	
 	<script type="text/javascript" src="/js/vendor/modernizr-2.6.2.min.js"></script>
-	<style>
-		header, hgroup, nav, section, article, aside, footer {
-			
-		}
-
-		#wrapper {
-			width:800px; 
-			margin:0 auto;
-		}
-
-		#wrapper section#option {
-			float:left;
-			width:268px;
-			height:480px;
-		}
-
-		#wrapper section#page {
-			float:right;
-			width:522px;
-			min-height:480px;
-			background-color:#eee;
-			color:#666;  
-		}
-
-		#wrapper footer#page_footer {
-			clear:both;
-			width:100%;
-			height:40px;
-			border-top:#ED2525 solid 2px;
-			font-size:1.7em;
-			text-shadow: 1px 0px #666;
-		}
-	</style>
-
 </head>
 <body>
 <!--[if lt IE 7]>
@@ -59,7 +25,7 @@
 <![endif]-->
     
 <div id="wrapper">
-<section id="option">
+<section id="side">
 	<nav>
 		<a href="/home/">
 			<div id="xm-bt-home" class="xm-bt">
@@ -97,19 +63,17 @@
 	</aside>
 </section>
 
-<section id="page">
-    <article>
-        <?php 
-			if (isset($_GET['page'])) {
-				include 'pages/'.$_GET['page'].'.php';
-			} else {
-				include 'pages/home.php';
-			}
-		?>
-    </article>        
-</section>
+<article id="content">
+    <?php 
+		if (isset($_GET['page'])) {
+			include 'pages/'.$_GET['page'].'.php';
+		} else {
+			include 'pages/home.php';
+		}
+	?>
+</article>        
     
-<footer id="page_footer">
+<footer id="footer">
 	<img class="social-bt" src="/images/social/deviantart.png" />    
 	<img class="social-bt" src="/images/social/facebook.png" />    
 	<img class="social-bt" src="/images/social/github.png" />    

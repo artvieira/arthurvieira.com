@@ -1,38 +1,96 @@
+<?php
+$GLOBALS["MSG"] = "";
+
+if (isset($_POST["submit"]) && $_POST["submit"]=="create") {
+    $pathname = "temp/".$_POST["dir"]."/";
+    
+    if (!file_exists($pathname)) {
+        mkdir($pathname, 0755, true);
+    }
+    
+    $my_file = $pathname.$_POST["nameFile"];
+
+    $handle = fopen($my_file, "w") or die("Cannot open file:  ".$my_file);
+    $data = $_POST["content"];
+    fwrite($handle, $data);
+    
+    $GLOBALS["MSG"] = $_POST["dir"]."/".$_POST["nameFile"]." created!";
+} 
+?>
+
 <!DOCTYPE >
 <html>
 <head>
 	<title>Dir/File Creator</title>
+	
+	<link rel="stylesheet" type="text/css" href="/fonts/Bariol-Regular/font.css">
+	
+	<style>
+	    #wrapper {
+	       width:1600px; 
+           margin:0 auto;
+	    }
+	    
+	    body {
+	        background-color:#EEE;
+	        font-size:62.5%;
+	    }
+	
+	    body, input[type=text], input[type=submit], input[type=reset], #content {
+	        font-family:'Bariol-Regular';
+            color:#666;
+            outline: none;
+            font-smoothing:antialiased;
+            -moz-font-smoothing:antialiased;
+            -webkit-font-smoothing:antialiased;
+            -o-font-smoothing:antialiased;
+  	    }
+  	    
+  	    label {
+            font-size: 2em;   
+  	    }
+  	    
+  	    input[type=text] {
+  	        width: 260;
+  	    }
+	    
+	    input[type=text], #submit, #reset, #content {
+	        font-size: 1.6em;
+	    }
+	    
+	    #content {
+	       font-family: "Courier New", Courier, monospace;
+	       resize: none;
+	       height: 400px;
+	       width: 1600px; 	       
+	    }
+	    
+	</style>
 </head>
 
 <body>
-	<form method="post" action="?save=true">
-		Dir: <input id="dir" name="dir" type="text"></input><br />
-		File Name: <input id="nameFile" name="nameFile" type="text"></input><br />
-		Content: <textArea id="content" name="content"></textArea><br />
-		
-		<span>
-			<input type="submit" value="create" ></input>
-			<input type="reset" value="reset"></input>
-		</span>
+<article id="wrapper">
+	<form method="post" action="">
+        <label>Dir:</label>
+        <br />
+        <input id="dir" name="dir" type="text"></input>
+        <br />
+        <label>File Name:</label>
+        <br />
+        <input id="nameFile" name="nameFile" type="text"></input>
+        <br />
+		<br />
+        <label>Content:</label><br />
+        <textArea id="content" name="content"></textArea><br />
+        
+        <span>
+            <input id="submit" name="submit" type="submit" value="create" /> 
+            <input id="reset" type="reset" value="reset"></input>
+        </span>
 	</form>
+	
+	<?php echo "<label>".$GLOBALS['MSG']."</label>" ?>
+</article>
 </body>
 </html>
 
-<?php
-$create = @$_GET["save"];
-
-if ($create) {
-	$pathname = "temp/".$_POST["dir"]."/";
-	mkdir($pathname, 0755, true);
-	
-	$my_file = $pathname.$_POST["nameFile"];
-	
-	echo $my_file;
-	
-	$handle = fopen($my_file, 'w') or die('Cannot open file:  '.$my_file);
-	$data = $_POST["content"];
-	fwrite($handle, $data);
-	
-	echo "created!";
-} 
-?>

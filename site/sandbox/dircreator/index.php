@@ -1,21 +1,24 @@
 <?php
-$GLOBALS["MSG"] = "";
+/* TODO ADD CAPTCHA VALIDATOR*/
+$GLOBALS['msg'] = '';
 
-if (isset($_POST["submit"]) && $_POST["submit"]=="create") {
-    $pathname = "temp/".$_POST["dir"]."/";
+if (isset($_POST['submit']) && $_POST['submit']=='create' && $_POST['pass'] == 'alpine') {
+    $pathname = 'temp/'.$_POST['dir'].'/';
     
     if (!file_exists($pathname)) {
         mkdir($pathname, 0755, true);
     }
     
-    $my_file = $pathname.$_POST["nameFile"];
+    $my_file = $pathname.$_POST['nameFile'];
 
-    $handle = fopen($my_file, "w") or die("Cannot open file:  ".$my_file);
-    $data = $_POST["content"];
+    $handle = fopen($my_file, 'w') or die('Cannot open file:  '.$my_file);
+    $data = $_POST['content'];
     fwrite($handle, $data);
     
-    $GLOBALS["MSG"] = $_POST["dir"]."/".$_POST["nameFile"]." created!";
-} 
+    $GLOBALS['msg'] = $_POST['dir'].'/'.$_POST['nameFile'].' created!';
+} else {
+    $GLOBALS['msg'] = 'Error! Invalid pass!';
+}
 ?>
 
 <!DOCTYPE >
@@ -70,6 +73,8 @@ if (isset($_POST["submit"]) && $_POST["submit"]=="create") {
 
 <body>
 <article id="wrapper">
+        
+    
 	<form method="post" action="">
         <label>Dir:</label>
         <br />
@@ -78,6 +83,10 @@ if (isset($_POST["submit"]) && $_POST["submit"]=="create") {
         <label>File Name:</label>
         <br />
         <input id="nameFile" name="nameFile" type="text"></input>
+        <br />
+        <label>Pass:</label>
+        <br />
+        <input id="pass" name="pass" type="password"></input>
         <br />
 		<br />
         <label>Content:</label><br />
@@ -89,7 +98,7 @@ if (isset($_POST["submit"]) && $_POST["submit"]=="create") {
         </span>
 	</form>
 	
-	<?php echo "<label>".$GLOBALS['MSG']."</label>" ?>
+	<?php echo "<label>".$GLOBALS['msg']."</label>" ?>
 </article>
 </body>
 </html>

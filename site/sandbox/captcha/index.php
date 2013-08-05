@@ -51,7 +51,7 @@ if (isset($_POST['submit']) && $_POST['submit'] == 'Validar Captcha') {
 <body>
 <img src="captcha.php">
 <br />
-<label>* apenas letras pequenas são validas</label>
+<label>* digite apenas as letras pequenas da imagem</label>
 <br />
 <label>* não existe diferença entre maiusculas e minusculas</label>
 <!--

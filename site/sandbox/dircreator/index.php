@@ -5,9 +5,10 @@ $GLOBALS['msg'] = '';
 if (isset($_POST['submit']) && $_POST['submit']=='create' && $_POST['pass'] == 'alpine') {
     $pathname = 'temp/'.$_POST['dir'].'/';
     
-    if (!file_exists($pathname)) {
+	// TODO Bug on CentOS, dont find 'path' 
+    // if (!file_exists($pathname)) {
         mkdir($pathname, 0755, true);
-    }
+    // }
     
     $my_file = $pathname.$_POST['nameFile'];
 

@@ -88,6 +88,9 @@
 	</a> 
 	<a href="https://twitter.com/art_vieira" target="_blank">  
 		<img class="social-bt" src="/images/social/twitter.png" /> 
+	</a> 
+	<a href="skype:arthurvmx5?call">  
+		<img class="social-bt" src="/images/social/skype.png" /> 
 	</a>   
 	
 	<span style="float:right; margin-top:8px; margin-right:5px; color:black;">

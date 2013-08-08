@@ -1,30 +1,42 @@
 <section class="content-section">
 	<form>
-		<p class="form-label">
-			Nome:
-		</p>
-		<input id="namemsg" name="namemsg" class="form-input-text required" type="text" width="50" maxlength="30"/>
+		<input id="namemsg" name="namemsg" type="text" placeholder="Name" class="form-input-text required" style="display: block; width: 140px;" />
 
-		<p class="form-label">
-			Email:
-		</p>
-		<input id="emailmsg" name="emailmsg" class="form-input-text required" type="text" width="50" maxlength="30"/>
-		<p style="font-size:1em !important;">
-			your email address will not be published.
-		</p>
+		<input id="emailmsg" name="emailmsg" type="text" placeholder="Email" class="form-input-text required" style="display: block; width: 180px; margin-top: 10px;" />
 
-		<p class="form-label">
-			Assunto:
-		</p>
-		<input id="headmsg" name="headmsg" class="form-input-text required" type="text" width="50" maxlength="40"/>
+		<input id="headmsg" name="headmsg"type="text" placeholder="Subject" class="form-input-text required" style="display: block; width: 160px; margin-top: 20px;" />
 
-		<br />
-		<br />
-		<textarea id="bodymsg" name="bodymsg" class="form-textarea required" rows="5" cols="41"></textarea>
+		<textarea id="bodymsg" name="bodymsg" placeholder="Message..." class="form-textarea required" style="display: block; width: 300px; margin-top: 10px;" ></textarea>
 				
-		<br />
-
-		<input id="send" type="button" style="display: inline; margin-top: 10px;" value="Send" />
-		<input id="new" type="button" style="display: inline; margin-top: 10px;" value="Clean" />
+		<input id="send" type="button" value="Send" style="display: block; margin-top: 10px;"/>
 	</form>
+	
+	<h1>Social networks</h1>
+	<p>
+		<a href="http://art-vieira.deviantart.com" target="_blank">
+			<img class="social-bt" src="/images/social/deviantart.png" />
+			devianArt  
+		</a>
+		<a href="https://www.facebook.com/AVMLU" target="_blank">
+			<img class="social-bt" src="/images/social/facebook.png" />
+			Facebook
+		</a>
+		<a href="https://github.com/artvieira" target="_blank">    
+			<img class="social-bt" src="/images/social/github.png" />
+			Github  
+		</a> 
+		<br />
+		<a href="http://www.linkedin.com/pub/arthur-vieira/28/995/3b4" target="_blank"> 
+			<img class="social-bt" src="/images/social/linkedin.png" />
+			LinkedIn
+		</a> 
+		<a href="https://twitter.com/art_vieira" target="_blank">  
+			<img class="social-bt" src="/images/social/twitter.png" /> 
+			Twitter
+		</a> 
+		<a href="skype:arthurvmx5?call">  
+			<img class="social-bt" src="/images/social/skype.png" /> 
+			Skype
+		</a>   
+	</p>
 </section>

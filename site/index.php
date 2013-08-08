@@ -56,7 +56,7 @@
 		</a>
 	</nav>
 	
-	<aside style="clear:both; margin-left: 5px;">
+	<aside style="clear:both; margin-left: 5px; display:none;">
 		<span id="bt-es" class="multi-lang"><img src="/images/lang/es.png" height="28px" width="46" /></span>
 		<span id="bt-ptbr" class="multi-lang"><img src="/images/lang/ptbr.png" height="28px" width="46" /></span>
 		<span id="bt-en" class="multi-lang"><img src="/images/lang/en.png" height="28px" width="46" /></span>
@@ -74,12 +74,21 @@
 </article>        
     
 <footer id="footer">
-	<img class="social-bt" src="/images/social/deviantart.png" />    
-	<img class="social-bt" src="/images/social/facebook.png" />    
-	<img class="social-bt" src="/images/social/github.png" />    
-	<img class="social-bt" src="/images/social/linkedin.png" />    
-	<img class="social-bt" src="/images/social/skype.png" />    
-	<img class="social-bt" src="/images/social/twitter.png" />    
+	<a href="http://art-vieira.deviantart.com" target="_blank">
+		<img class="social-bt" src="/images/social/deviantart.png" />    
+	</a>
+	<a href="https://www.facebook.com/AVMLU" target="_blank">
+		<img class="social-bt" src="/images/social/facebook.png" />
+	</a>
+	<a href="https://github.com/artvieira" target="_blank">    
+		<img class="social-bt" src="/images/social/github.png" />  
+	</a> 
+	<a href="http://www.linkedin.com/pub/arthur-vieira/28/995/3b4" target="_blank"> 
+		<img class="social-bt" src="/images/social/linkedin.png" />
+	</a> 
+	<a href="https://twitter.com/art_vieira" target="_blank">  
+		<img class="social-bt" src="/images/social/twitter.png" /> 
+	</a>   
 	
 	<span style="float:right; margin-top:8px; margin-right:5px; color:black;">
 		arthur vieira m. lucena, 2013

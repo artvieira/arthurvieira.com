@@ -11,7 +11,8 @@ window.scrollTo(0, 1);
 	*/
 	
 	function _main() {
-		setLangBrowser();
+		// TODO translate all files first 
+		// setLangBrowser();
 	}
 
 	function callCSSTransitions() {

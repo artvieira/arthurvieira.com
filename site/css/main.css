@@ -331,6 +331,10 @@ body {
     -o-font-smoothing:antialiased;
 }
 
+a {
+	text-decoration: none;
+}
+
 p, section#bio-content li {
     font-size:1.6em;
 }

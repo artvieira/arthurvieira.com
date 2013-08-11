@@ -142,6 +142,8 @@ window.scrollTo(0, 1);
 	
 	_main();
 	
+	/* all pages */
+	
 	$('#bt-es').click(function () {
 		changeToES();
 	});
@@ -153,4 +155,8 @@ window.scrollTo(0, 1);
 	$('#bt-ptbr').click(function () {
 		changeToPTBR();
 	});
+	
+	/* works page */
+	
+	$('#da-slider').cslider();
 })(jQuery);

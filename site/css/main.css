@@ -424,7 +424,52 @@ p, section#bio-content li {
 }
  
  /* ==========================================================================
-   Author's custom styles FORM STYLE 
+   Author's custom styles WORK PAGE
+   ========================================================================== */
+ 
+.da-slide h2 {
+	margin-top: -50px;
+	font-size: 2em;
+	text-shadow: 1px 1px 1px rgba(0,0,0,0.2);
+}
+
+.da-slide .da-img {
+	margin-left: -140px;
+}
+
+.da-slide p {
+	color:#fff;
+	font-size: 1.4em;
+	z-index:999;
+	margin-top: -115px;
+	margin-left: -45px;
+	width:160px;
+	height:340px;
+	line-height:normal;
+	overflow:hidden;
+}
+
+.da-slide .da-link {
+	margin-bottom: -100px; 
+}
+
+.da-slide .da-link {
+	top: 380px;
+	font-size: 1.3em;
+	border-radius: 0px;
+	box-shadow: none;
+	color: #fff;
+	text-shadow: 1px 1px 1px rgba(0,0,0,0.2);
+	border: none;
+	padding: 0px;
+	line-height: 10px;
+	text-align: center;
+	background: none;
+}
+	
+ 
+ /* ==========================================================================
+   Author's custom styles CONTACT PAGE
    ========================================================================== */
    
 .form-label {

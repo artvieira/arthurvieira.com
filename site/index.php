@@ -14,8 +14,8 @@
 	<title>Arthur Vieira</title>
 	
 	<link rel="stylesheet" type="text/css" href="/css/normalize.min.css">
-	<link rel="stylesheet" type="text/css" href="../css/cslider/frame.css">
-	<link rel="stylesheet" type="text/css" href="../css/cslider/animations.css">
+	<link rel="stylesheet" type="text/css" href="/css/cslider/frame.css">
+	<link rel="stylesheet" type="text/css" href="/css/cslider/animations.css">
 	<link rel="stylesheet" type="text/css" href="/fonts/Bariol-Regular/font.css">
 	<link rel="stylesheet" type="text/css" href="/css/main.css">
 	
@@ -103,7 +103,7 @@
     
 <script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
 <script>window.jQuery || document.write('<script type="text/javascript" src="/js/vendor/jquery-1.9.1.min.js"><\/script>')</script>
-<script type="text/javascript" src="../js/vendor/jquery.cslider.min.js"></script>
+<script type="text/javascript" src="/js/vendor/jquery.cslider.min.js"></script>
 <script type="text/javascript" src="/js/main.js"></script>
 <script type="text/javascript">
   var _gaq = _gaq || [];

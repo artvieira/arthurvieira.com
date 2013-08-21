@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project name="Helper arthurvieira.com" default="deploy.wp.theme.development" basedir="../">
+    
+	<description>
+		helps in dev of themes for wordpress
+    </description>
+
+	<!-- Some vars -->
+	<property file="build/config/build.properties" />
+	
+	<target name="deploy.prodution" description=" ">
+	</target>
+	
+	<target name="deploy.testing" description=" ">
+	</target>
+	
+	<target name="deploy.development" description=" ">
+	</target>
+	
+	<target name="deploy.wp.theme.development" description="Deploy theme to wordpress from development">
+		<delete dir="${dir.wp.theme.deploy}/${wp.nametheme}"/>
+		<mkdir dir="${dir.wp.theme.deploy}/${wp.nametheme}"/>
+		
+		<copy todir="${dir.wp.theme.deploy}/${wp.nametheme}">
+			<fileset dir="${basedir}/${dir.wp.theme.development}"/>
+		</copy>
+	</target>
+	
+	<target name="mkdir.tmp">
+		<mkdir dir="${basedir}/${dir.tmp}" />
+	</target>			
+			
+	<target name="concat.js">
+		<concat destfile="${dir.tmp}/${dir.js}/script.js">
+			<fileset dir="${dir.work}/${dir.js}">
+				<include name="*.js"/>
+				<include name="*/**"/>
+			</fileset>
+		</concat>
+	</target>	
+		
+	<target name="concat.css">
+		<concat destfile="${dir.tmp}/${dir.css}/style.css">
+			<fileset dir="${dir.work}/${dir.css}">
+				<include name="*.css"/>
+				<include name="*/**"/>
+			    <exclude name="normalize.min.css"/>
+			</fileset>
+		</concat>
+	</target>
+	
+	<target name="minify.js">
+        <!--
+		<apply executable="java" parallel="false">
+            <fileset dir="${basedir}/${dir.tmp}/${dir.js}" includes="script.js"/>
+            <arg line="-jar"/>
+            <arg path="${dir.build.tools}/${tools.yuicompressor.name}"/>
+            <srcfile/>
+            <arg line="-o"/>
+            <mapper type="merge" to="${basedir}/${dir.tmp}/${dir.js}/script.min.js"/>
+            <targetfile/>
+        </apply>
+		-->
+
+		<apply executable="java" parallel="false">
+            <fileset dir="${basedir}/${dir.tmp}/${dir.js}" includes="script.js"/>
+            <arg line="-jar"/>
+            <arg path="${dir.build.tools}/${tool.compiler.name}"/>
+            <arg line="--js"/>
+            <srcfile/>
+            <arg line="--compilation_level" />
+            <arg value="${scripts.compilation.level}" />
+            <arg line="--warning_level" />
+            <arg value="${scripts.compilation.warninglevel}" />
+            <arg line="--js_output_file" />
+            <mapper type="merge" to="${basedir}/${dir.tmp}/${dir.js}/script.min.js"/>
+            <targetfile/>
+        </apply>
+    </target>
+
+	<target name="minify.css">
+        <apply executable="java" parallel="false">
+            <fileset dir="${basedir}/${dir.tmp}/${dir.css}" includes="style.css"/>
+            <arg line="-jar"/>
+            <arg path="${dir.build.tools}/${tools.yuicompressor.name}"/>
+            <srcfile/>
+            <arg line="-o"/>
+            <mapper type="merge" to="${basedir}/${dir.tmp}/${dir.css}/style.min.css"/>
+            <targetfile/>
+        </apply>
+    </target>
+	
+	<target name="deploy.web">
+		<scp trust="true" todir="root:Tra53Sol@192.81.212.110:/var/www/html/arthurvieira.com">
+		    <fileset dir="${basedir}/site"/>
+		  </scp>
+	</target>
+</project>

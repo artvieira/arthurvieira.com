@@ -89,10 +89,4 @@
             <targetfile/>
         </apply>
     </target>
-	
-	<target name="deploy.web">
-		<scp trust="true" todir="root:Tra53Sol@192.81.212.110:/var/www/html/arthurvieira.com">
-		    <fileset dir="${basedir}/site"/>
-		  </scp>
-	</target>
 </project>

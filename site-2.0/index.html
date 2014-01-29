@@ -14,10 +14,10 @@ http://microjs.com/
         <meta name="viewport" content="width=device-width">
 
         <link rel="stylesheet" href="css/normalize.min.css">
-        <!--<link rel="stylesheet" href="css/main.css">-->
+        <link rel="stylesheet" href="css/main.css">
         <style>
-        section.content-section {
-            margin:20% 0 20% 0;
+        section.content-article {
+            height: 100%;
         }
         </style>
         <script src="js/vendor/modernizr-2.6.2-respond-1.1.0.min.js"></script>
@@ -73,25 +73,29 @@ http://microjs.com/
             </footer>
         </div>
 -->
-        <section id="side" style="position: fixed; left:80%; z-index: 1;">
-            <nav>
-                <a href="#hello">hello</a>
-                <a href="#contact">contact</a>
-                <a href="#works">works</a>      
-                <a href="#bio">bio</a>
-            </nav>
-        </section>
+        <div class="header-container">
+            <header class="wrapper clearfix">
+                <nav style="position: fixed;">
+                    <ul>
+                        <li><a href="#hello">hello</a></li>
+                        <li><a href="#contact">contact</a></li>
+                        <li><a href="#works">works</a></li>     
+                        <li><a href="#bio">bio</a></li>
+                    </ul>
+                </nav>
+            </header>
+        </div>
 
-        <article id="content">
-            <section id="hello" class="content-section">
+        <section id="content">
+            <article id="hello" class="content-article">
                 <h1>Hello! I'm Arthur!</h1>
                 
                 <p>I build beautiful websites using the best techniques on the market!</p>
                 
                 <p>It also can take care of other things like Design Logos, Website Layouts, Blogs, Layouts for blogs, SEO, E-Commerces and Config Web Servers.</p>
-            </section>
+            </article>
             
-            <section id="bio" class="content-section">
+            <article id="bio" class="content-article">
                 <h1>Who I Am</h1>
                 <p>I am Arthur, programmer, illustrator, designer, curious, eternal student and racing fan.</p>
                 
@@ -130,9 +134,9 @@ http://microjs.com/
                     <li>Magenta</li>
                     <li>Server CentOS 6.3</li>
                 </ul>
-            </section>
+            </article>
             
-            <section id="works" class="content-section">
+            <article id="works" class="content-article">
                 <div id="da-slider" class="da-slider">
                     <div class="da-slide">
                         <h2>Paraiba Recuperadora</h2>
@@ -156,9 +160,9 @@ http://microjs.com/
                         <span class="da-arrows-next"></span>
                     </nav>
                 </div>
-            </section>
+            </article>
             
-            <section id="contact" class="content-section">
+            <article id="contact" class="content-article">
                 <form action="" method="post">
                     <input id="name" name="name" type="text" placeholder="Name" class="form-input-text" required style="display: block; width: 140px;" />
 
@@ -195,10 +199,10 @@ http://microjs.com/
                         Skype
                     </a>   
                 </p>
-            </section>
-        </article>        
+            </article>
+        </section>        
             
-        <footer id="footer">
+        <footer>
             <a href="http://art-vieira.deviantart.com" target="_blank">
             </a>
             <a href="https://www.facebook.com/AVMLU" target="_blank">
@@ -212,35 +216,13 @@ http://microjs.com/
             <a href="skype:arthurvmx5?call">  
             </a>   
             
-            <span style="float:right; margin-top:8px; margin-right:5px; color:black;">
+            <span>
                 arthur vieira m. lucena, <span id="footer-date"></span>
             </span>
         </footer>
 
-        <script src="js/vendor/jquery-1.10.1.min.js"></script>
-
-        <script>
-            document.getElementById('footer-date').textContent = new Date().getFullYear();
-
-            $(function() {
-              $('a[href*=#]:not([href=#])').click(function() {
-                if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
-                  var target = $(this.hash);
-                  target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
-                  if (target.length) {
-                    $('html,body').animate({
-                      scrollTop: target.offset().top
-                    }, 1000);
-                    return false;
-                  }
-                }
-              });
-            });
-
-            var _gaq=[['_setAccount','UA-XXXXX-X'],['_trackPageview']];
-            (function(d,t){var g=d.createElement(t),s=d.getElementsByTagName(t)[0];
-            g.src='//www.google-analytics.com/ga.js';
-            s.parentNode.insertBefore(g,s)}(document,'script'));
-        </script>
+        <script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>
+        <script>window.jQuery || document.write('<script type="text/javascript" src="/js/vendor/jquery-1.10.1.min.js"><\/script>')</script>
+        <script type="text/javascript" src="js/main.js"></script>
     </body>
 </html>
